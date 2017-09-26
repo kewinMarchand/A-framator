@@ -1,0 +1,200 @@
+body {
+            height: 100vh;
+            width: 100vw;
+            margin: 0;
+            padding: 0; 
+            position: relative;
+            display: flex;
+            flex-wrap: wrap;
+            font-size: 0.9em;
+            font-family: 'Roboto', sans-serif;
+        }   
+        #loader {
+            position : fixed;
+            z-index: 9999;
+            top : 0px;
+            left : 0px;
+            height : 100%;
+            width : 100%;
+            background-color: #606060;
+            }
+        #loader-bg {
+            z-index: 9999;
+            height: 100vh;
+            width: 100vw;
+            background : url('../img/puff.svg') 50% 50% no-repeat;
+            
+        }
+
+
+
+
+
+        /*                  ***menu outils              */
+        #menu-container {
+            height: 100%;
+            width: 6%;
+            position: absolute;
+            top: 0;
+            left: 0; 
+            border-right: 1px solid #000;   
+            z-index: 2; 
+            background-color: #424242;
+        }
+        ul#menu {
+            width: 100%;
+            height: auto;
+            list-style-type: none;
+            margin-top: 10px;
+            padding-left: 0px !important;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: flex-start;    
+        }
+        #menu li {
+            display: block;
+            width: 90%;
+        }
+        
+        #menu li button {
+            display: block;
+            background-color: transparent;
+            width: 100%;
+            height: auto;
+            border: 1px solid transparent;
+        }
+
+
+
+
+
+
+        /*                  ***menu calques             */
+        #calques-container { 
+            height: 100%;
+            width: 6%;
+            position: absolute;
+            bottom: : 0;
+            right: 0;    
+            border-left: 1px solid #000;
+            z-index: 2; 
+            background-color: #424242;
+        }
+        ul#calques {
+            width: 100%;
+            height: auto;
+            list-style-type: none;
+            margin-top: 10px;
+            padding-left: 0px !important;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;    
+        }
+        #calques li {
+            display: block;
+            width: 90%;
+        }
+        #calques li button {
+            display: block;
+            background-color: transparent;
+            width: 100%;
+            height: auto;
+            border: 1px solid transparent;
+        }
+        .calques {
+            width: 100%;
+        }
+        .calques p {
+            display: block;
+            text-align: center;
+            background-color: #fff;
+        }
+
+
+
+
+
+        h1 {
+            display: block;
+            margin: 0;
+            height: 10vh;
+            text-align: center;
+        }
+        
+        
+        h4 {
+            margin: 0;
+            display: block;
+            width: 100%;
+        }
+        #reglages {
+
+            height: auto;
+            width: 88%;
+            position: absolute;
+            top: 0;
+            left: 6%;  
+            background-color: #606060;
+            border-bottom: 1px solid #000;
+            display: flex;
+            justify-content: space-around;
+            align-items: flex-end;
+            z-index: 1;
+        }
+        .params {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-around;
+            margin-bottom: 10px;
+        }
+        h2 {
+            width: 100%;
+            display: block;
+            text-align: center;
+            font-size: 1.1em;
+            color: #fff;
+        }
+        label {
+            display: block;
+            color: #fff;
+        }
+        input {
+            display: block;
+            width: 4vw;
+        }
+        .color {
+            width: 4vw;
+        }
+        .identifiant {
+            width: 8vw;
+        }
+        .valideur {
+            display: block;
+            width: 4vw;
+
+        }
+        #a-scene {
+            position: absolute;
+            background-color: #404040;
+        }
+        
+        h3 {
+            padding: 0 10px;
+            margin: 10 10px;
+            text-align: center;
+            background-color: #E5F1FB;
+        }
+        .a-enter-vr-button {
+            right: 10% !important ;
+            z-index: 1 !important ;
+        }
+        .outil-icon {
+            fill:#999999;
+        }
+        img {
+            height: auto;
+            width: 100%;
+        }

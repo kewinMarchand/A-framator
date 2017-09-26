@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Générateur Vr - A-framator">
+    <meta name="author" content="Kewin Marchand">
+    <link rel="icon" href="img/kiwi.svg">
+
+    <title>A-Framator</title>    
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"> 
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+  </head>
+  <body>
+  	<div id="loader">
+  		<div id="loader-bg">  			
+  		</div>
+  	</div>
+	<a-scene id="a-scene">
+		<a-assets>
+			<img id="sol" src="sol.png">
+		</a-assets>
+	  	<a-camera>
+			<a-cursor fuse: true; fuseTimeout: 500"
+            position="0 0 -1"
+            geometry="primitive: ring; radiusInner: 0.02; radiusOuter: 0.03"
+            material="color: black; shader: flat"></a-cursor>
+		</a-camera>
+	 	<a-plane src="#sol" class="clickable" height="50" width="50" rotation="-90 0 0" material="src: sol.png; repeat: 50 50"></a-plane>
+	</a-scene>
+	<div id="menu-container">
+	  	<ul id="menu">
+	  		<li>
+	  			<button type="submit" id="outils" class="outil" >
+					<img src="img/tools.svg" width="100%" height="auto">
+				</button>
+			</li>
+	  		<li>
+		  		<button type="submit" id="sky" class="outil" >
+					<img src="img/sky.svg" width="100%" height="auto">
+				</button>
+			</li>
+		   	<li>
+			   	<button type="submit" id="plane" class="outil" >
+					<img src="img/plane.svg" width="100%" height="auto">
+			   	</button>
+		   	</li>
+		  	<li>
+		  		<button type="submit" id="box" class="outil" >
+		  			<img src="img/cube.svg" width="100%" height="auto">
+				</button>
+			</li>
+		   	<li>
+			   	<button type="submit" id="sphere" class="outil" >
+					<img src="img/sphere.svg" width="100%" height="auto">
+				</button>
+			</li>
+		   	<li>
+		   		<button type="submit" id="cylinder" class="outil" >
+					<img src="img/cylinder.svg" width="100%" height="auto">
+				</button>
+			</li>
+			<li>
+		   		<button type="submit" id="torus" class="outil" >
+					<img src="img/torus.svg" width="100%" height="auto">
+				</button>
+			</li>
+		</ul>
+	</div>
+	<div id="calques-container">
+		<ul id="calques">
+			<li>
+	  			<button type="submit" id="calque" class="calques" >
+					<img src="img/calques.svg" width="100%" height="auto">
+				</button>
+			</li>
+			<li id="calque-plane" class="calques" ><p>sol</p></li>
+		</ul>
+	</div>	
+	<div id="reglages">
+			
+		  	<div class="params" id="Couleur-primitive-container">	
+		  		<h2 >Couleur :</h2>			  	
+			  	<label ></label>
+			  	<input type="color" name="Clr" class="color" value="">
+		  	</div>
+			
+			<div class="params" id="Position-primitive-container">
+				<h2>Position :</h2>
+			  	<label class="labelsX">X :</label>
+			  	<input type="text" name="Px" class="inputsX" value="">
+			  	<label class="labelsY">Y :</label>
+			  	<input type="text" name="Py" class="inputsY" value="">
+			  	<label class="labelsZ">Z :</label>
+			  	<input type="text" name="Pz" class="inputsZ" value="">
+			</div>
+
+			<div class="params" id="Rotation-primitive-container">
+				<h2 >Rotation :</h2>
+			  	<label class="labelsX">X :</label>
+			  	<input type="text" name="Rx" class="inputsX" value="">
+			  	<label class="labelsY">Y :</label>
+			  	<input type="text" name="Ry" class="inputsY" value="">
+			  	<label class="labelsZ">Z :</label>
+			  	<input type="text" name="Rz" class="inputsZ" value="">
+			</div>			
+			
+			<div class="params" id="Longueur-primitive-container">
+				<h2 >Longueur :</h2>
+			  	<label ></label>
+			  	<input type="text" name="Lo" value="">
+			</div>
+			
+			<div class="params" id="Largeur-primitive-container">
+				<h2 >Largeur :</h2>
+			  	<label ></label>
+			  	<input type="text" name="La" value="">
+			</div>
+
+			<div class="params" id="Profondeur-primitive-container">
+				<h2 >Profondeur :</h2>
+			  	<label ></label>
+			  	<input type="text" name="La" value="">
+			</div>
+
+			<div class="params" id="Radius-primitive-container">
+				<h2 >Rayon :</h2>
+			  	<label ></label>
+			  	<input type="text" name="La" value="">
+			</div>
+			
+			<div class="params" id="Identifiant-primitive-container">
+				<h2 >Nom :</h2>
+			  	<label ></label>
+			  	<input type="text" name="id" class="identifiant" value="">
+			</div>
+
+			<div class="params" id="Primitive-valid-container">
+				<button class="valideur" type="submit">ok</button>
+			</div>
+	</div>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://aframe.io/releases/0.3.2/aframe.min.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
+  </body>
+</html>
