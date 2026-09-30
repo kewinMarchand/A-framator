@@ -1,37 +1,47 @@
-## Welcome to GitHub Pages
+# A-Framator
 
-You can use the [editor on GitHub](https://github.com/kewinMarchand/A-framator/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+Éditeur de scènes WebGL dans le navigateur : on ajoute des primitives A-Frame à une scène 3D via un menu d'outils et un panneau de réglages.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+Démo : https://kewinmarchand.github.io/A-framator/
 
-### Markdown
+## Fonctionnalités
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+- Scène de départ avec une caméra, un curseur et un sol texturé (`sol.png`).
+- Menu d'outils pour ajouter un ciel, un plan, un cube, une sphère, un cylindre ou un tore.
+- Panneau de réglages prérempli selon la primitive : couleur, position (X, Y, Z), rotation (X, Y, Z), longueur, largeur, profondeur, rayon et nom.
+- Chaque objet validé est ajouté à la scène et listé dans le panneau des calques.
 
-```markdown
-Syntax highlighted code block
+## Stack
 
-# Header 1
-## Header 2
-### Header 3
+- [A-Frame](https://aframe.io/) 0.3.2 (CDN aframe.io)
+- jQuery 3.1.1 (CDN Google)
+- HTML, CSS et JavaScript sans build, police Roboto (Google Fonts)
 
-- Bulleted
-- List
+## Lancer en local
 
-1. Numbered
-2. List
+Le projet est statique. Servir le dossier avec un serveur HTTP, par exemple :
 
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
+```sh
+python3 -m http.server 8000
 ```
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+Puis ouvrir http://localhost:8000. Une connexion internet est nécessaire pour charger A-Frame, jQuery et la police.
 
-### Jekyll Themes
+## Structure
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/kewinMarchand/A-framator/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+```
+index.html      scène A-Frame, menu d'outils, calques et panneau de réglages
+js/script.js    logique de l'éditeur (jQuery)
+css/style.css   styles de l'interface
+img/            icônes SVG des outils
+sol.png         texture du sol
+_config.yml     thème Jekyll de GitHub Pages
+```
 
-### Support or Contact
+## État du projet
 
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+Prototype non maintenu, dernier commit le 26 septembre 2017. Non implémenté : la sélection et la modification d'un objet depuis les calques (code commenté dans `js/script.js`), la suppression d'objets et l'export de la scène. Les boutons « outils » et « calques » n'ont pas d'action dédiée.
+
+## Licence
+
+MIT, voir [LICENSE](LICENSE).
